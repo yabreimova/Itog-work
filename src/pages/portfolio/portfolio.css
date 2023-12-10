@@ -1,0 +1,57 @@
+.App {
+    text-align: center;
+    background-image: url('/src/pages/backgraund.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+h1,
+h2 {
+    font-size: 70px;
+    margin: 0px;
+    color: slateblue;
+    text-shadow: 1px 0 1px #000,
+        0 1px 1px #000,
+        -1px 0 1px #000,
+        0 -1px 1px #000;
+}
+
+p {
+    font-size: 25px;
+    line-height: 35px; 
+    color: white;
+    text-shadow: 1px 0 1px #000,
+        0 1px 1px #000,
+        -1px 0 1px #000,
+        0 -1px 1px #000;
+}
+
+.photo {
+    width: 350px;
+    height: 296px;
+    margin: 9px;
+    border-radius: 50px;
+}
+
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button button {
+    margin-top: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 250px;
+}

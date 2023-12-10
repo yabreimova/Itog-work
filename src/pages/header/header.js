@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import './header.css';
 
 const pages = ['Главная', 'Портфолио', 'Галерея', 'Контакты'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Профиль', 'Аккаунт', 'Панель управления', 'Выйти'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
