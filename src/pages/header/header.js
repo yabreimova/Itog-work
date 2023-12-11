@@ -13,18 +13,23 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import './header.css';
+import { Link } from "react-router-dom";
 
 const pages = ['Главная', 'Портфолио', 'Галерея', 'Контакты'];
-const settings = ['Профиль', 'Аккаунт', 'Панель управления', 'Выйти'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const routerPaths = ['', 'portfolio', 'gallery', 'contacts'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  
 
   const handleOpenNavMenu = (event) => {
+    console.log(event.currentTarget);
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event) => {
+    console.log(event.currentTarget);
     setAnchorElUser(event.currentTarget);
   };
 
@@ -37,7 +42,7 @@ function Header() {
   };
 
   return (
-    <AppBar position="static" className='header' style={{backgroundColor: '#6A5ACD'}}>
+    <AppBar position="static" className='header' style={{backgroundColor: '#8dabda'}} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -112,17 +117,18 @@ function Header() {
               textDecoration: 'none',
             }}
           >
-           SINERGY
+            Sinergy
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+            {pages.map((page, index) => (
+              <Link to={`/${routerPaths[index].toLowerCase()}`} key={index}>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page}
+                </Button>
+                </Link>
             ))}
           </Box>
 

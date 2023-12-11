@@ -9,7 +9,7 @@
 
   .container-title {
     height: 100px;
-    width: 590px;
+    width: 720px;
     color: rgb(255 244 254);
     border-radius: 10%;
     position: absolute;
@@ -22,11 +22,11 @@
 
   .background-container {
     background-color: rgb(106 90 205);
-    opacity: 0.8;
-    height: 210px;
-    width: 620px;
+    opacity: 0.5;
+    height: 409px;
+    width: 754px;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 48px;
     }
 
 
